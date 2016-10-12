@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/categroy/categroy",
+    "pages/hot/hot",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "yoho!buy",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#FF0062",
+    "borderStyle": "black",
+    "backgroundColor":"#000",
+    "list": [  
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "images/drawable-hdpi-v4/tabbar_homepage_highlighted_gray.png",
+        "selectedIconPath": "images/drawable-hdpi-v4/tabbar_homepage_highlighted_red.png"
+      },
+      {
+        "pagePath": "pages/categroy/categroy",
+        "text": "分类",
+        "iconPath": "images/drawable-hdpi-v4/tabbar_category_highlighted_gray.png",
+        "selectedIconPath": "images/drawable-hdpi-v4/tabbar_category_highlighted_red.png"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "iconPath": "images/drawable-hdpi-v4/tabbar_see_highlighted_gray.png",
+        "selectedIconPath": "images/drawable-hdpi-v4/tabbar_see_highlighted_red.png",
+        "text": "热门"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "images/drawable-hdpi-v4/tabbar_cart_highlighted_gray.png",
+        "selectedIconPath": "images/drawable-hdpi-v4/tabbar_cart_highlighted_red.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/drawable-hdpi-v4/tabbar_mine_highlighted_gray.png",
+        "selectedIconPath": "images/drawable-hdpi-v4/tabbar_mine_highlighted_red.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": true
+}

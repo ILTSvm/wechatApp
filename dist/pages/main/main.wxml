@@ -1,0 +1,61 @@
+<scroll-view scroll-y = "{{true}}">
+	<loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+</loading> 
+	<view class="section">
+		<swiper loop = "-1" indicator-dots = "{{swiper.indicatorDots}}" autoplay = "{{swiper.autoplay}}" current = "{{current}}" interval = "{{swiper.duration}}">
+			<block wx:for="{{banner1}}">
+		    <swiper-item>
+		      <image src="{{item}}" class="slide-image"/>
+		    </swiper-item>
+		  </block>
+		</swiper>
+		<nav class = "navlist">
+			<block wx:for="{{navimg}}">
+				<li>
+					<image src = "{{item.src}}" class = "nav-image" mode = "aspectFit"/>
+					<p>{{item.text}}</p>
+				</li>
+			</block>
+		</nav>
+		<nav class = "bannerlist">
+			<block wx:for="{{img}}">
+				<li>
+					<image src = "{{item}}" class = "banner2-image"/>
+				</li>
+			</block>
+		</nav>
+		<swiper loop = "-1" indicator-dots = "{{swiper.indicatorDots}}" autoplay = "{{swiper.autoplay}}" current = "{{current}}" interval = "{{swiper.duration}}">
+			<block wx:for="{{banner2}}">
+		    <swiper-item>
+		      <image src="{{item}}" class="slide-image"/>
+		    </swiper-item>
+		  </block>
+		</swiper>
+		<scroll-view scroll-x = "{{true}}" class = "scroll_first">
+		    <ul>
+					<block wx:for="{{scroll1}}">
+						<li>
+							<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
+							<p>{{item.name}}</p>
+							<span>￥{{item.price}}</span>
+							<figcaption>新人价</figcaption>
+						</li>
+					</block>
+				</ul>
+		</scroll-view>
+		<view class = "good">
+			<figcaption>猜你喜欢</figcaption>
+			<ul class = "goodlist">
+				<block wx:for="{{goods}}">
+					<li>
+						<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
+						<p>{{item.name}}</p>
+						<span>￥{{item.price}}</span>
+					</li>
+				</block>
+			</ul>
+		</view>
+	</view>
+</scroll-view>
+

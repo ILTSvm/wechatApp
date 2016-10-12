@@ -1,0 +1,106 @@
+page {
+  height: 100%; }
+
+body {
+  background: #ccc; }
+
+.scroll-view {
+  height: 100%; }
+
+.slide-image {
+  width: 100%;
+  height: 100%; }
+
+.navlist {
+  display: flex;
+  box-sizing: border-box;
+  height: 300rpx;
+  flex-wrap: wrap; }
+  .navlist li {
+    /*box-sizing: border-box;*/
+    height: 50%;
+    width: 20%;
+    /*padding:5px;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    .navlist li p {
+      font-size: 12px;
+      flex: 1; }
+    .navlist li image {
+      box-sizing: border-box;
+      width: 100%;
+      flex: 2;
+      padding: 5px; }
+
+.bannerlist {
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  padding-bottom: 30rpx; }
+  .bannerlist li {
+    flex: 1;
+    height: 250rpx;
+    padding: 30rpx 0 0 0; }
+  .bannerlist image {
+    width: 100%;
+    height: 100%; }
+
+.scroll_first {
+  height: 800rpx; }
+  .scroll_first ul {
+    width: 2000px;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap; }
+    .scroll_first ul li {
+      font-size: 12rpx;
+      display: flex;
+      flex-direction: column;
+      padding: 30rpx;
+      width: 180px;
+      text-align: center; }
+      .scroll_first ul li image {
+        width: 100%; }
+      .scroll_first ul li p {
+        text-align: center; }
+      .scroll_first ul li span {
+        color: #761C19; }
+      .scroll_first ul li figcaption {
+        display: block;
+        width: 90rpx;
+        margin: 0 auto;
+        color: #fff;
+        background: #d0021b;
+        border: 1rpx solid #fff;
+        border-radius: 10px; }
+
+.good figcaption {
+  display: block;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center; }
+
+.good .goodlist {
+  display: flex;
+  flex-wrap: wrap; }
+  .good .goodlist li {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 700rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    text-align: left; }
+  .good .goodlist image {
+    width: 100%;
+    flex: 4; }
+
+.good .goolist p {
+  text-align: center; }
+
+.good .goodlist span {
+  color: #A61717; }
