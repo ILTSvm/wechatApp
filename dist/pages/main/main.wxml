@@ -1,9 +1,12 @@
-<scroll-view scroll-y = "{{true}}">
-	<loading hidden="{{hidden}}" bindchange="loadingChange">
+<loading hidden="{{hidden}}"  bindscrolltolower="loadingChange">
     加载中...
 </loading> 
+<scroll-view scroll-y = "{{true}}" bindscrolltolower="loadMore">
 	<view class="section">
-		<swiper loop = "-1" indicator-dots = "{{swiper.indicatorDots}}" autoplay = "{{swiper.autoplay}}" current = "{{current}}" interval = "{{swiper.duration}}">
+	    <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+        <icon type="waiting" size="45"/><text>刷新中...</text></view>
+        <view wx:else  style="display:none" ><text></text></view>
+		<swiper indicator-dots = "{{swiper.indicatorDots}}" autoplay = "{{swiper.autoplay}}" current = "{{current}}" interval = "{{swiper.duration}}">
 			<block wx:for="{{banner1}}">
 		    <swiper-item>
 		      <image src="{{item}}" class="slide-image"/>
@@ -57,5 +60,10 @@
 			</ul>
 		</view>
 	</view>
+	<view class="tips1">
+      <view wx:if="{{hasMore}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+      <icon type="waiting" size="30"/><text>玩命的加载中...</text></view>
+      <view wx:else><text>没有更多内容了</text></view>
+    </view>
 </scroll-view>
 

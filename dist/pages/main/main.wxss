@@ -5,7 +5,7 @@ body {
   background: #ccc; }
 
 .scroll-view {
-  height: 100%; }
+  height: auto; }
 
 .slide-image {
   width: 100%;

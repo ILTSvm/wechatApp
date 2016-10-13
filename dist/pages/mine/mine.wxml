@@ -1,0 +1,35 @@
+<scroll-view scroll-y = "{{true}}">
+	<loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+</loading> 
+	<view class="section">
+		<view class = "orders">
+			<view class = "orders-top">
+				<view class = "oreders-top-left">我的订单</view>
+				<view class = "orders-top-right">全部订单</view>
+			</view>
+			<ul class = "iconlist">
+				<block wx:for = "{{icon}}">
+					<li class = "icon">
+						<image src = "{{item.src}}"  mode = "aspectFit"/>
+						<span>{{item.text}}</span>
+					</li>
+				</block>
+			</ul>
+		</view>
+		<view class = "orders">
+			<view class = "orders-top">
+				<view class = "oreders-top-left">我的资产</view>
+			</view>
+			<ul class = "iconlist">
+				<block wx:for = "{{icon2}}">
+					<li class = "icon">
+						<image src = "{{item.src}}"  mode = "aspectFit"/>
+						<span>{{item.text}}</span>
+					</li>
+				</block>
+			</ul>
+		</view>
+	</view>
+</scroll-view>
+

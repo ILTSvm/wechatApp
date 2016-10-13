@@ -3,6 +3,7 @@ Page({
     current: 0,
     hidden:false,
     hasRefesh:false,
+    hasMore:false,
     pageindex:1,
     banner1:[
       "/images/banner1.jpg",
@@ -82,7 +83,7 @@ Page({
   onLoad: function () {
     var that = this;
     wx.request({
-      url: 'https://wlwywlqk.cn/goods/getData?categorygroup=男装&pageindex='+that.data.pageindex+'&pagesize=50',
+      url: 'https://wlwywlqk.cn/goods/getData?categorygroup=男装&pageindex='+that.data.pageindex+'&pagesize=20',
       header: {
           'Content-Type': 'application/json'
       },
@@ -113,11 +114,13 @@ Page({
       }
     });
   },
-  newGood:function(e){
+  loadMore:function(e){
+  	console.log(0);
   	var that = this;
   	var pageindex = that.data.pageindex+1;
   	that.setData({
   		hasRefesh:true,
+  		hasMore:true,
   		pageindex:pageindex,
   		hidden:false
   	});
@@ -129,7 +132,7 @@ Page({
       success: function(res) {
 	      console.log(res.data);
 	      that.setData({
-	        goods:res.data,
+	        goods:res.data.goods.concat(res.data),
 	        hidden:true,
 	        hasRefresh:false
 	      });
