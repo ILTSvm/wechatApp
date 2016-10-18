@@ -8,6 +8,7 @@ Page({
       interval: 0,
       duration: 300
     },
+    goods:{},
     icon:[
 			{
 				src:"/images/drawable-hdpi-v4/mine_order_payment.png",
@@ -49,16 +50,17 @@ Page({
   onLoad: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost/mock/list.json',
+      url: 'https://wlwywlqk.cn/goods/getData?categorygroup=男装&pageindex='+Math.ceil(Math.random()*10)+'&pagesize=20',
       header: {
           'Content-Type': 'application/json'
       },
       success: function(res) {
-        console.log(res.data);
-        that.setData({
-          list: res.data
-        });
-      },
+	      console.log(res.data);
+	      that.setData({
+	        goods:res.data,
+	        hidden:true
+	      });
+     	},
       fail: function (error) {
         console.log(error);
       }

@@ -89,12 +89,15 @@ body {
   flex-wrap: wrap; }
   .good .goodlist li {
     width: 50%;
-    display: flex;
-    flex-direction: column;
     height: 700rpx;
     box-sizing: border-box;
-    padding: 20rpx;
-    text-align: left; }
+    padding: 20rpx; }
+    .good .goodlist li navigator {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      height: 100%;
+      width: 100%; }
   .good .goodlist image {
     width: 100%;
     flex: 4; }

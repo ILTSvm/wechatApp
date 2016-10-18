@@ -1,0 +1,108 @@
+page {
+  height: 100%;
+  background: #eeeeee; }
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.main-list {
+  flex: 1;
+  overflow: hidden; }
+  .main-list .scroll-view {
+    height: 100%; }
+
+.main-nav {
+  height: 35px;
+  background: #000;
+  color: #fff; }
+
+.main-nav ul {
+  height: 35px;
+  display: flex;
+  background: #000; }
+
+.main-nav ul li {
+  background: #000;
+  height: 35px;
+  flex: 1;
+  line-height: 35px;
+  text-align: center;
+  border-bottom: solid 1px #d9d9d9;
+  font-size: 14px;
+  box-sizing: border-box; }
+
+.main-nav ul li.active {
+  border-bottom: solid 2px #0dc441;
+  color: #E0002A; }
+
+.good {
+  background: #fff; }
+  .good figcaption {
+    display: block;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center; }
+  .good .goodlist {
+    display: flex;
+    flex-wrap: wrap; }
+    .good .goodlist li {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      height: 700rpx;
+      box-sizing: border-box;
+      padding: 20rpx;
+      text-align: left;
+      background: #fff; }
+    .good .goodlist image {
+      width: 100%;
+      flex: 4; }
+  .good .goodlist p {
+    text-align: left; }
+  .good .goodlist span {
+    color: #A61717; }
+
+.goods {
+  background: #fff; }
+  .goods .goodlist {
+    display: flex;
+    flex-wrap: wrap; }
+    .goods .goodlist li {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      height: 300rpx;
+      box-sizing: border-box;
+      padding: 50rpx;
+      text-align: left;
+      border-top: 1rpx solid #ccc; }
+      .goods .goodlist li image {
+        width: 30%;
+        height: 100%; }
+      .goods .goodlist li .li-right {
+        width: 70%;
+        display: flex;
+        flex-direction: column; }
+        .goods .goodlist li .li-right p {
+          height: 50rpx;
+          line-height: 50rpx;
+          flex: 1;
+          font-size: 14rpx;
+          width: 100%;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          text-wrap: nowrap;
+          overflow: hidden; }
+        .goods .goodlist li .li-right .comment {
+          color: #B0B0B0;
+          font-size: 12rpx; }
+        .goods .goodlist li .li-right span {
+          color: #C0C0C0;
+          height: 50rpx;
+          line-height: 50rpx;
+          font-size: 12rpx; }

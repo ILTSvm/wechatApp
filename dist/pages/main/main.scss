@@ -104,17 +104,22 @@ body {
     line-height: 60rpx;
     text-align: center;
   }
-  .goodlist {
+  .goodlist{
     display: flex;
     flex-wrap: wrap;
     li {
       width: 50%;
-      display: flex;
-      flex-direction: column;
       height: 700rpx;
       box-sizing: border-box;
       padding: 20rpx;
+       navigator{
+       display: flex;
+      flex-direction: column;
       text-align: left;
+      height: 100%;
+      width:100%;
+       }
+
     }
     image {
       width: 100%;
@@ -124,7 +129,7 @@ body {
   .goolist p {
     text-align: center;
   }
-  .goodlist span {
+  .goodlist span { 
     color: #A61717;
-  }
+  } 
 }

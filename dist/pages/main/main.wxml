@@ -21,6 +21,7 @@
 				</li>
 			</block>
 		</nav>
+		
 		<nav class = "bannerlist">
 			<block wx:for="{{img}}">
 				<li>
@@ -28,6 +29,20 @@
 				</li>
 			</block>
 		</nav>
+		<scroll-view scroll-x = "{{true}}" class = "scroll_first">
+		    <ul>
+				<block wx:for="{{scroll1}}">
+					
+					<li>
+						<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
+						<p>{{item.name}}</p>
+						<span>￥{{item.price}}</span>
+						<figcaption>新人价</figcaption>
+					</li>
+					
+				</block>
+			</ul>
+		</scroll-view>
 		<swiper loop = "-1" indicator-dots = "{{swiper.indicatorDots}}" autoplay = "{{swiper.autoplay}}" current = "{{current}}" interval = "{{swiper.duration}}">
 			<block wx:for="{{banner2}}">
 		    <swiper-item>
@@ -35,27 +50,20 @@
 		    </swiper-item>
 		  </block>
 		</swiper>
-		<scroll-view scroll-x = "{{true}}" class = "scroll_first">
-		    <ul>
-					<block wx:for="{{scroll1}}">
-						<li>
-							<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
-							<p>{{item.name}}</p>
-							<span>￥{{item.price}}</span>
-							<figcaption>新人价</figcaption>
-						</li>
-					</block>
-				</ul>
-		</scroll-view>
+
 		<view class = "good">
 			<figcaption>猜你喜欢</figcaption>
 			<ul class = "goodlist">
 				<block wx:for="{{goods}}">
+					
 					<li>
+						<navigator url="../hot/hot.wxml" hover-class="navigator-hover">
 						<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
 						<p>{{item.name}}</p>
 						<span>￥{{item.price}}</span>
+						</navigator>
 					</li>
+					
 				</block>
 			</ul>
 		</view>

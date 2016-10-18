@@ -30,6 +30,18 @@
 				</block>
 			</ul>
 		</view>
+		<view class = "good">
+			<figcaption>猜你喜欢</figcaption>
+			<ul class = "goodlist">
+				<block wx:for="{{goods}}">
+					<li>
+						<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
+						<p>{{item.name}}</p>
+						<span>￥{{item.price}}</span>
+					</li>
+				</block>
+			</ul>
+		</view>
 	</view>
 </scroll-view>
 

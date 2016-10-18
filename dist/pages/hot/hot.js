@@ -1,69 +1,71 @@
 Page({
   data: {
-    current: 2,
-    list: [],
+    current: 0,
+    goods: [],
     swiper: {
       indicatorDots: false,
       autoplay: false,
       interval: 0,
       duration: 300
-    }
+    },
+    goods:{},
+    icon:[
+			{
+				src:"/images/drawable-hdpi-v4/mine_order_payment.png",
+				text:"待付款"
+			},
+			{
+				src:"/images/drawable-hdpi-v4/mine_order_ship.png",
+				text:"待发货"
+			},
+						{
+				src:"/images/drawable-hdpi-v4/mine_order_shipped.png",
+				text:"待收货"
+			},
+			{
+				src:"/images/drawable-hdpi-v4/mine_order_delivered.png",
+				text:"待晒单"
+			},
+			{
+				src:"/images/drawable-hdpi-v4/mine_order_return.png",
+				text:"退/换货"
+			}
+    ],
+    icon2:[
+    	{
+				src:"/images/drawable-hdpi-v4/mine_coupon_icon.png",
+				text:"优惠券"
+			},
+			{
+				src:"/images/drawable-hdpi-v4/mine_mine_yohob_icon.png",
+				text:"有货币"
+			},
+			{
+				src:"/images/drawable-hdpi-v4/mine_limit_code.png",
+				text:"限购码"
+			}
+    ]
   },
 
   onLoad: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost/mock/list.json',
-      // url: 'http://felixlu.bceapp.com/list.php',
+      url: 'https://wlwywlqk.cn/goods/getData?categorygroup=男装&pageindex='+Math.ceil(Math.random()*10)+'&pagesize=20',
       header: {
           'Content-Type': 'application/json'
       },
       success: function(res) {
-        console.log(res.data);
-        that.setData({
-          list: res.data
-        });
-      },
+	      console.log(res.data);
+	      that.setData({
+	        goods:res.data,
+	        hidden:true
+	      });
+     	},
       fail: function (error) {
         console.log(error);
       }
     });
-    // this.setData({
-    //   list: [
-    //     {
-    //       "img": "/images/img1.jpg",
-    //       "title": "西甲-巴萨3-4客负 皇马1-1丢榜首",
-    //     },
-    //     {
-    //       "img": "/images/img2.png",
-    //       "title": "英超-曼联憾平 曼城0-2热刺 瓜帅首败",
-    //     },
-    //     {
-    //       "img": "/images/img3.jpg",
-    //       "title": "意甲-AC米兰4-3 国米1-2罗马",
-    //     },
-    //     {
-    //       "img": "/images/img4.jpg",
-    //       "title": "德甲-拜仁1-1终结连胜 药厂擒多特",
-    //     },
-    //     {
-    //       "img": "/images/img1.jpg",
-    //       "title": "西甲-巴萨3-4客负 皇马1-1丢榜首",
-    //     },
-    //     {
-    //       "img": "/images/img2.png",
-    //       "title": "英超-曼联憾平 曼城0-2热刺 瓜帅首败",
-    //     },
-    //     {
-    //       "img": "/images/img3.jpg",
-    //       "title": "意甲-AC米兰4-3 国米1-2罗马",
-    //     },
-    //     {
-    //       "img": "/images/img4.jpg",
-    //       "title": "德甲-拜仁1-1终结连胜 药厂擒多特",
-    //     }
-    //   ]
-    // })
+
   },
 
   actionToupper: function () {
