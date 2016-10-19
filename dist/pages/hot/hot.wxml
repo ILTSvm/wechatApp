@@ -42,7 +42,7 @@
 						<ul class = "goodlist">
 							<block wx:for="{{goods}}">
 								<li>
-									<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
+									<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFill"/>
 									<view class = "li-right">
 										<p>{{item.name}}</p>
 										<p class = "comment">{{item.comment}}</p>

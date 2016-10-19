@@ -37,7 +37,7 @@ Page({
 				text:"优惠券"
 			},
 			{
-				src:"/images/drawable-hdpi-v4/mine_mine_yohob_icon.png",
+				src:"/images/drawable-hdpi-v4/mine_yohob_icon.png",
 				text:"有货币"
 			},
 			{

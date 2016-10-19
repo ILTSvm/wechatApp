@@ -1,0 +1,41 @@
+page {
+  height: 100%; 
+  font-size:12rpx;}
+.section{
+  height:100%;
+  width:100;
+}
+button{
+  background: red;
+}
+swiper{
+  height: 375px; }
+
+.button-hover {
+  background-color: red; }
+
+.good-img {
+  height: 375px;
+  width: 100%;
+  text-align: center; }
+  .good-img image {
+    display: block;
+    height: 100%;
+    width: 100%; }
+    .good-info{
+      display:flex;
+      flex-direction: column;
+    }
+    .good-info p{
+      color:#000;
+
+      line-height:100rpx;
+      display: block;
+      font-size:50rpx;
+    }
+    .good-info span{
+        font-size:40rpx;
+        height:100rpx;
+        line-height:100rpx;
+        color:brown;
+    }

@@ -57,7 +57,7 @@
 				<block wx:for="{{goods}}">
 					
 					<li>
-						<navigator url="../hot/hot.wxml" hover-class="navigator-hover">
+						<navigator url="../detail/detail?id={{item._id}}" hover-class="navigator-hover">
 						<image src = "https://wlwywlqk.cn/img/{{item.piclists[0]}}" class = "good-image" mode = "aspectFit"/>
 						<p>{{item.name}}</p>
 						<span>￥{{item.price}}</span>

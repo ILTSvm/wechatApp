@@ -1,0 +1,24 @@
+
+<scroll-view scroll-y = "{{true}}" bindscrolltolower="loadMore">
+	<view class="section">
+	<toast hidden="{{toastHidden}}" bindchange="toast1Change">
+    加入购物车！
+  </toast>
+	    <view wx:if="{{hasRefesh}}" style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;">
+        <icon type="waiting" size="45"/><text>刷新中...</text></view>
+        <view wx:else  style="display:none" ><text></text></view>
+		<swiper style = "height:375px;width:100%;"indicator-dots = "{{swiper.indicatorDots}}" autoplay = "{{swiper.autoplay}}" current = "{{current}}" interval = "{{swiper.duration}}">
+			<block wx:for="{{goods[0].piclists}}">
+		    <swiper-item class = "good-img">
+		      <image src = "https://wlwywlqk.cn/img/{{item}}" class = "good-image" mode = "aspectFill"/>
+		    </swiper-item>
+		  </block>
+		</swiper>
+		<view class = "good-info">
+			<p>{{goods[0].name}}</p>
+			<span>￥{{goods[0].price}}</span>
+		</view>
+		<button  bindtap = "toastChange">加入购物车</button>
+
+	</view>
+</scroll-view>
